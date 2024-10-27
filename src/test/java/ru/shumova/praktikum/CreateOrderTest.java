@@ -64,6 +64,7 @@ public class CreateOrderTest {
     }
 
     @After
+    @Step("Удаление тестовой информации")
     public void finalizeTest() {
         orderService.cancelOrder(new CancelOrderRequest(track));
     }

@@ -42,6 +42,7 @@ public class CreateCourierTest {
         courierService.createCourier(request);
         courierService.createCourier(request).then().statusCode(409)
                 .body("message", is("Этот логин уже используется. Попробуйте другой."));
+        finalizeTest();
     }
 
     @Test
